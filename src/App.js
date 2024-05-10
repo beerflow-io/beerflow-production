@@ -1,9 +1,10 @@
 import './App.css';
+import Landing from './landing/pages/landing';
 
 function App() {
   return (
     <div className="App">
-      <h1>beerflow.io</h1>
+      <Landing />
     </div>
   );
 }

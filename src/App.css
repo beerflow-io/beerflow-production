@@ -1,38 +1,56 @@
-.App {
-  text-align: center;
+/* Universal */
+* {
+  letter-spacing: 0.0175rem;
+}
+.glass {
+  background: rgba(255,255,255,0.05);
+  -webkit-backdrop-filter: blur(1em);
+  backdrop-filter: blur(1em);
+  border: 1px solid rgba(255,255,255,0.1);
+  opacity: .9;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.glass-text {
+  opacity: 1;
+  letter-spacing: 0.0175rem;
+  color: rgba(255, 255, 255, 0.9);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Colors */
+.beerflow-gradient-text {
+  background-image: linear-gradient(90deg, rgb(8, 145, 178), rgb(19, 191, 165));
+  color: transparent;
+  -webkit-background-clip: text;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.blue-gradient-text {
+  background-image: linear-gradient(90deg, rgb(2, 132, 199), rgb(125, 211, 252));
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: bold;
+}
+
+/* Utility */
+/* Landing */
+.landing-main {
+  height: 100vh;
+  width: 100%;
+}
+/* Landing Nav */
+.landing-nav-background {
+  background-image: linear-gradient(90deg, rgb(8, 145, 178), rgb(19, 191, 165));
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+/* Beta Registration Form */
+.beta-registration-div {
+  display: flex;
+  flex-direction: column;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.beta-form-row {
+  display: flex;
+  flex-direction: row;
 }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
