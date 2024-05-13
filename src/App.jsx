@@ -1,5 +1,5 @@
 import { Amplify } from 'aws-amplify';
-import amplifyConfig from './amplifyconfiguration.json';
+import amplifyconfig from './amplifyconfiguration.json';
 import { BrowserRouter as Router, Route, Routes, Navigate, useNavigate} from 'react-router-dom';
 import './App.css';
 import Landing from './landing/pages/landing';

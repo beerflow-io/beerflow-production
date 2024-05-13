@@ -10,6 +10,10 @@ export default defineConfig(() => {
         external: ['aws-amplify']
       }
     },
+    resolve: {
+        alias: {
+          "./runtimeConfig": "./runtimeConfig.browser",
+        },
     plugins: [react()],
   };
 });
