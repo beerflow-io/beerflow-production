@@ -1,3 +1,4 @@
+import * as React from 'react';
 import { Amplify } from 'aws-amplify';
 import amplifyconfig from './amplifyconfiguration.json';
 import { BrowserRouter as Router, Route, Routes, Navigate, useNavigate} from 'react-router-dom';
