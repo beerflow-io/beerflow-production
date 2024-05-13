@@ -5,6 +5,9 @@ export default defineConfig(() => {
   return {
     build: {
       outDir: 'build',
+      rollupOptions: {
+        external: ['aws-amplify']
+      }
     },
     plugins: [react()],
   };
