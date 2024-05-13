@@ -703,7 +703,7 @@ video {
 }
 
 .w-\[\] {
-  width: ;
+  width: auto;
 }
 
 .w-\[80\%\] {
@@ -846,6 +846,11 @@ video {
 .text-sky-600 {
   --tw-text-opacity: 1;
   color: rgb(2 132 199 / var(--tw-text-opacity));
+}
+
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 .opacity-100 {

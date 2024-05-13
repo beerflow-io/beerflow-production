@@ -1,6 +1,10 @@
 /* Universal */
 * {
-  letter-spacing: 0.0175rem;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
 }
 .glass {
   background: rgba(255,255,255,0.05);
@@ -30,6 +34,18 @@
   font-weight: bold;
 }
 
+.green-gradient-text {
+  background-image: linear-gradient(90deg, rgb(34, 197, 94), rgb(134, 239, 172));
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: bold;
+}
+
+.green-gradient-background {
+  background-image: linear-gradient(90deg, rgb(8, 145, 178), rgb(19, 191, 165));
+  color: white;
+}
+
 /* Utility */
 /* Landing */
 .landing-main {
@@ -38,19 +54,72 @@
 }
 /* Landing Nav */
 .landing-nav-background {
-  background-image: linear-gradient(90deg, rgb(8, 145, 178), rgb(19, 191, 165));
+  background-image: linear-gradient(90deg, rgb(2, 132, 199), rgb(125, 211, 252));
   color: white;
 }
 /* Beta Registration Form */
-.beta-registration-div {
-  display: flex;
-  flex-direction: column;
-}
+
 
 .beta-form-row {
   display: flex;
   flex-direction: row;
+  width: 100%;
+  justify-content: center;
 }
+
+/* Footer */
+.footer-background {
+  background-image: linear-gradient(90deg, rgb(2, 132, 199), rgb(125, 211, 252));
+  color: white;
+}
+
+/* Dashboard */
+.dashboard-main {
+  height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.dashboard-content {
+  position: absolute;
+  top: 0;
+  margin-top: 50px; /* Adjust this value based on the height of your top navigation */
+  margin-left: 100px; /* Adjust this value based on the width of your side navigation */
+  padding: 20px;
+  width: 94%;
+  height: 92%;
+  /* Add padding for spacing */
+}
+
+/* Side Nav */
+.icon {
+   /* Adjust according to your icon size */
+   background-image: linear-gradient(90deg, rgb(8, 145, 178), rgb(19, 191, 165));
+   -webkit-background-clip: text;
+   background-clip: text;
+   color: transparent; /* Hide the actual text */
+   
+}
+
+.icon-row {
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+  align-items: center;
+  gap: 10%;
+  width: 100%;
+  margin-top: 8%;
+  margin-left: 6%;
+  text-decoration: none;
+}
+
+.donut-chart-label {
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

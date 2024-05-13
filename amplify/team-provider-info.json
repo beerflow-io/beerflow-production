@@ -1,0 +1,35 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-beerflowproduction-dev-c08a0-authRole",
+      "UnauthRoleArn": "arn:aws:iam::381492283860:role/amplify-beerflowproduction-dev-c08a0-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::381492283860:role/amplify-beerflowproduction-dev-c08a0-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-beerflowproduction-dev-c08a0-deployment",
+      "UnauthRoleName": "amplify-beerflowproduction-dev-c08a0-unauthRole",
+      "StackName": "amplify-beerflowproduction-dev-c08a0",
+      "StackId": "arn:aws:cloudformation:us-east-2:381492283860:stack/amplify-beerflowproduction-dev-c08a0/c1457a80-0f49-11ef-9b32-0a1c2217f603",
+      "AmplifyAppId": "d1p3uzc9kutnov",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-beerflowproduction-dev-c08a0-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
+    },
+    "categories": {
+      "function": {
+        "beerflowproduction72048318": {
+          "deploymentBucketName": "amplify-beerflowproduction-dev-c08a0-deployment",
+          "s3Key": "amplify-builds/beerflowproduction72048318-2f6d6d30777554787837-build.zip"
+        },
+        "server": {
+          "deploymentBucketName": "amplify-beerflowproduction-dev-c08a0-deployment",
+          "s3Key": "amplify-builds/server-45474b6655507031706f-build.zip"
+        }
+      },
+      "auth": {
+        "beerflowproduction": {}
+      },
+      "api": {
+        "mongodb": {},
+        "expressApi": {}
+      }
+    }
+  }
+}

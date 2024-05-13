@@ -1,0 +1,128 @@
+{
+  "api": {
+    "expressApi": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "server"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    },
+    "mongodb": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "beerflowproduction72048318"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "auth": {
+    "beerflowproduction": {
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito",
+      "serviceType": "managed"
+    }
+  },
+  "function": {
+    "beerflowproduction72048318": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "server": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "beerflowproduction72048318"
+        },
+        {
+          "attributes": [
+            "UserPoolId"
+          ],
+          "category": "auth",
+          "resourceName": "beerflowproduction"
+        },
+        {
+          "attributes": [
+            "ApiName",
+            "ApiId"
+          ],
+          "category": "api",
+          "resourceName": "mongodb"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_beerflowproduction72048318_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "beerflowproduction72048318"
+        }
+      ]
+    },
+    "AMPLIFY_function_beerflowproduction72048318_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "beerflowproduction72048318"
+        }
+      ]
+    },
+    "AMPLIFY_function_server_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "server"
+        }
+      ]
+    },
+    "AMPLIFY_function_server_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "server"
+        }
+      ]
+    }
+  }
+}

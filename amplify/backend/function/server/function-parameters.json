@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "function": {
+      "beerflowproduction72048318": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ]
+    },
+    "auth": {
+      "beerflowproduction": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ]
+    },
+    "api": {
+      "mongodb": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ]
+    }
+  },
+  "lambdaLayers": []
+}
