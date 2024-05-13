@@ -5,7 +5,7 @@ export default defineConfig(() => {
   return {
     build: {
       outDir: 'build',
-      assetsInclude: ['./amplifyconfiguration.json'],
+      assetsInclude: ['./src/amplifyconfiguration.json'],
       rollupOptions: {
         external: ['aws-amplify']
       }
